@@ -48,3 +48,25 @@ color: rgba(170,0,54,1);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(170,0,54,1);
 	box-shadow: 10px 10px 5px 0px rgba(170,0,54,1);
 }
+
+td {
+	border-style: solid;
+}
+tr {
+	height: 65px;
+}
+
+.black {
+	background-color: black;
+}
+
+.grid-gone {
+	display: none;
+}
+
+.grid-visible {
+
+}
+.gone {
+	display: none;
+}

@@ -4,6 +4,12 @@ function status() {
 
 function doesNumberToGuessExist() {
     playersGuess = parseInt(document.getElementById("playersGuess").value, 10), null === numberToGuess ? (startGame(), document.getElementById("playersGuess").value = "") : playerGuessCount > 0 && (document.getElementById("playersGuess").value = "", isItTheNumber(numberToGuess))
+
+blackenSquare(playersGuess)}
+
+function blackenSquare(gridNum){
+    console.log('#'+gridNum);
+    $('#'+gridNum).addClass('black');
 }
 
 function createNumberToGuess() {
@@ -42,6 +48,30 @@ function playAgain() {
 function hint() {
     document.getElementById("guess-count").innerHTML = numberToGuess
 }
+var count = 0;
+function seeGrid() {
+	// console.log(count);
+	if (count%2 === 0){
+		$('#grid').removeClass('gone');
+		$('#image').addClass('gone');
+		$('#guess').addClass('gone');
+		$('.main-box').addClass('gone');
+		$('#playersGuess').addClass('gone');
+		
+	} else {
+		$('#grid').addClass('gone');
+		$('#image').removeClass('gone');
+		$('#guess').removeClass('gone');
+		$('.main-box').removeClass('gone');
+		$('#playersGuess').removeClass('gone');
+		
+
+	}
+	count++;
+	//$(this).toggleClass('gone');
+}
+
+
 var numberToGuess = null,
     previousGuess = [],
     playerGuessCount = 5,
